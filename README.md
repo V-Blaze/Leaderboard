@@ -14,6 +14,19 @@
 
 - NPM
 
+- Lighthouse (An open-source, automated tool for improving the quality of web pages. It has audits for performance, accessibility, progressive web apps, SEO and more).
+
+- Webhint (A customizable linting tool that helps you improve your site's accessibility, speed, cross-browser compatibility, and more by checking your code for best practices and common errors).
+
+- Stylelint (A mighty, modern linter that helps you avoid errors and enforce conventions in your styles).
+
+### Linter Tests
+
+- `npx hint .`
+- `npx stylelint "**/*.{css,scss}"`
+- `npx eslint .`
+
+
 ### Prerequisites
 
 - Have a local version control like Git. Which is a open source distributed version control system designed for source code management
