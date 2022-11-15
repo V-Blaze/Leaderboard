@@ -7,37 +7,39 @@
 </head>
 <body>
     <main>
-        <div class="title">
-            <h1>Leaderboard</h1>
-        </div>
         <div class="main-section">
-            <div class="show-scores">
-                <div class="recent-scores">
-                    <h3>Recent scores</h3>
-                    <button>Refresh</button>
-                </div>
-                <div class="score-list">
-                    <div class="score-item">
-                        <span class="name">Name</span>:<span class="score">150</span>
-                    </div>
-                    <div class="score-item">
-                        <span class="name">Name</span>:<span class="score">250</span>
-                    </div>
-                    <div class="score-item">
-                        <span class="name">Name</span>:<span class="score">10</span>
-                    </div>
-                    <div class="score-item">
-                        <span class="name">Name</span>:<span class="score">50</span>
-                    </div>
-                </div>
+            <div class="title">
+                <h1>Leaderboard</h1>
             </div>
-            <div class="add-scores">
-                <h3>Add your score</h3>
-                <form action="" method="post">
-                    <input type="text" name="name" id="" placeholder="Your name" required>
-                    <input type="number" name="score" id="" placeholder="Your score" required>
-                    <button type="submit">Submit</button>
-                </form>
+            <div class="score-section">
+                <div class="show-scores">
+                    <div class="recent-scores">
+                        <h3>Recent scores</h3>
+                        <button class="refresh-btn">Refresh</button>
+                    </div>
+                    <div class="score-list">
+                        <div class="score-item">
+                            <span class="name">Name</span>:<span class="score">150</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="name">Name</span>:<span class="score">250</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="name">Name</span>:<span class="score">10</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="name">Name</span>:<span class="score">50</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-scores">
+                    <h3>Add your score</h3>
+                    <form action="" method="post" class="score-form">
+                        <input type="text" name="name" id="" placeholder="Your name" required>
+                        <input type="number" name="score" id="" placeholder="Your score" required>
+                        <button type="submit" class="form-btn">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </main>
