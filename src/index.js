@@ -1,7 +1,8 @@
 import './index.css';
-import { createNewGame, addNewScore } from './module/utils';
+import { createNewGame, addNewScore, getAllGameScores} from './module/utils';
 
 const scoreForm = document.getElementById('score-form');
+const refreshBtn = document.querySelector('.refresh-btn')
 
 scoreForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -19,6 +20,8 @@ scoreForm.addEventListener('submit', (e) => {
   scoreInput.value = ''
 
 });
+
+refreshBtn.addEventListener('click', getAllGameScores)
 
 
 // let GameID = "JcadSBKP5ieYGYly4Jui"
