@@ -1,3 +1,39 @@
+const scoreList = document.querySelector('.score-list')
+
+const displayScores = ({ user, score}) => {
+    
+
+    let div = document.createElement('div');
+    div.className = 'score-item'
+    div.innerHTML = `
+    <span class="name">${user}</span>:<span class="score">${score}</span>
+    `
+
+    return div
+}
+
+
+const getAllGameScores = async () => {
+    try {
+
+        const res = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${process.env.GAME_ID}/scores/`);
+        const data = await res.json()
+
+        if(!res.ok) {
+            return data
+        }
+
+        const scores = data.result
+        scoreList.innerHTML = ``
+        scores.forEach((score) => {
+            scoreList.append(displayScores(score))
+        })
+
+    } catch (error) {
+        return error
+    }
+}
+
 const addNewScore = async (newScore) => {
     try {
 
@@ -13,25 +49,8 @@ const addNewScore = async (newScore) => {
         if(!res.ok) {
             return data
         }
-
+        getAllGameScores()
         return data
-
-    } catch (error) {
-        return error
-    }
-}
-
-const getAllGameScores = async () => {
-    try {
-
-        const res = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${process.env.GAME_ID}/scores/`);
-        const data = await res.json()
-
-        if(!res.ok) {
-            return data
-        }
-
-        const scores = data.result
 
     } catch (error) {
         return error
@@ -67,5 +86,7 @@ const createNewGame = async () => {
     }
    
 }
+
+
 
 module.exports = { addNewScore, createNewGame, getAllGameScores }

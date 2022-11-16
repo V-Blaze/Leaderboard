@@ -24,5 +24,6 @@ scoreForm.addEventListener('submit', (e) => {
 refreshBtn.addEventListener('click', getAllGameScores)
 
 
-// let GameID = "JcadSBKP5ieYGYly4Jui"
-// createNewGame()
+window.onload = () => {
+  getAllGameScores()
+}
