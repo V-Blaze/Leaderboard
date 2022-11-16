@@ -7,5 +7,7 @@ scoreForm.addEventListener('submit', (e) => {
   e.preventDefault();
 });
 
-let GameID = "JcadSBKP5ieYGYly4Jui"
+console.log(process.env.GAME_ID)
+
+// let GameID = "JcadSBKP5ieYGYly4Jui"
 // createNewGame()
