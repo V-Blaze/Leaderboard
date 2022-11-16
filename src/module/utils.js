@@ -1,7 +1,7 @@
 const addNewScore = async (newScore) => {
     try {
 
-        const res = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/:id/scores/', {
+        const res = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${process.env.GAME_ID}/scores/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -41,13 +41,13 @@ const createNewGame = async () => {
         const data = await res.json()
 
         if(!res.ok) {
-            console.log(data)
-            return
+     
+            return data
         }
-        console.log(data)
+        return data
 
     } catch (error) {
-            console.log(error)
+            return error
     }
    
 }
