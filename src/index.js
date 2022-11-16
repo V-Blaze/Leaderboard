@@ -1,29 +1,27 @@
 import './index.css';
-import { createNewGame, addNewScore, getAllGameScores} from './module/utils';
+import { addNewScore, getAllGameScores } from './module/utils.js';
 
 const scoreForm = document.getElementById('score-form');
-const refreshBtn = document.querySelector('.refresh-btn')
+const refreshBtn = document.querySelector('.refresh-btn');
 
 scoreForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  let userInput = scoreForm.elements['user']
-  let scoreInput = scoreForm.elements['score']
+  const userInput = scoreForm.elements.user;
+  const scoreInput = scoreForm.elements.score;
 
   const newScore = {
-    "user": userInput.value,
-    "score": Number(scoreInput.value)
-  }
+    user: userInput.value,
+    score: Number(scoreInput.value),
+  };
 
-  addNewScore(newScore)
+  addNewScore(newScore);
 
-  userInput.value = ''
-  scoreInput.value = ''
-
+  userInput.value = '';
+  scoreInput.value = '';
 });
 
-refreshBtn.addEventListener('click', getAllGameScores)
-
+refreshBtn.addEventListener('click', getAllGameScores);
 
 window.onload = () => {
-  getAllGameScores()
-}
+  getAllGameScores();
+};
