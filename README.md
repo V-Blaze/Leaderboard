@@ -3,7 +3,7 @@
 - A JavaScript project for the Leaderboard list app
 
 # Live Demo
-- [Live Demo](https://rawcdn.githack.com/V-Blaze/Leaderboard/bf91d1cca19465bbcdd7f5e8aa068cc9a55097e5/dist/index.html)
+- [Live Demo](https://rawcdn.githack.com/V-Blaze/Leaderboard/002bba58b4e724a66c5049543887089965626c17/dist/index.html)
 
 ## Built With
 
