@@ -1,6 +1,7 @@
+import { showFeedBack } from "./feedback.js";
 const scoreList = document.querySelector('.score-list');
 
-const displayScores = ({ user, score }) => {
+export const displayScores = ({ user, score }) => {
   const div = document.createElement('div');
   div.className = 'score-item';
   div.innerHTML = `
@@ -10,7 +11,7 @@ const displayScores = ({ user, score }) => {
   return div;
 };
 
-const getAllGameScores = async () => {
+export const getAllGameScores = async () => {
   try {
     const res = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${process.env.GAME_ID}/scores/`);
     const data = await res.json();
@@ -32,7 +33,7 @@ const getAllGameScores = async () => {
   }
 };
 
-const addNewScore = async (newScore) => {
+export const addNewScore = async (newScore) => {
   try {
     const res = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${process.env.GAME_ID}/scores/`, {
       method: 'POST',
@@ -44,16 +45,20 @@ const addNewScore = async (newScore) => {
     const data = await res.json();
 
     if (!res.ok) {
+      showFeedBack(data.message)
       return data;
     }
+
     getAllGameScores();
+    showFeedBack(data.result)
     return data;
+    
   } catch (error) {
     return error;
   }
 };
 
-const createNewGame = async () => {
+export const createNewGame = async () => {
   const newGame = {
     name: 'Valentine Blaze Game',
   };
@@ -77,5 +82,3 @@ const createNewGame = async () => {
     return error;
   }
 };
-
-module.exports = { addNewScore, createNewGame, getAllGameScores };
