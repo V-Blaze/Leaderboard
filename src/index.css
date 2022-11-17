@@ -14,13 +14,11 @@ main {
   margin-bottom: 5%;
 }
 
-
 .main-section {
-  background-color: #fff;
-  margin: 5% 20%;
+  margin: 4% 18%;
+  padding: 3%;
   border-radius: 5px;
-  background: rgb(209,208,233);
-background: linear-gradient(90deg, rgba(209,208,233,1) 0%, rgba(189,189,236,1) 26%, rgba(200,200,254,1) 33%, rgba(159,159,236,1) 39%, rgba(167,237,251,1) 100%);
+  background: linear-gradient(90deg, rgba(209, 208, 233, 1) 0%, rgba(189, 189, 236, 1) 26%, rgba(200, 200, 254, 1) 33%, rgba(159, 159, 236, 1) 39%, rgba(167, 237, 251, 1) 100%);
 }
 
 .title h1 {
@@ -33,7 +31,6 @@ background: linear-gradient(90deg, rgba(209,208,233,1) 0%, rgba(189,189,236,1) 2
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 2.5rem;
-
 }
 
 .recent-scores {
@@ -64,11 +61,10 @@ background: linear-gradient(90deg, rgba(209,208,233,1) 0%, rgba(189,189,236,1) 2
 
 .score-list div:nth-child(odd) {
   color: #fff;
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 39%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 39%, rgba(0, 212, 255, 1) 100%);
 }
 
-.score-list i{
+.score-list i {
   border: 1px solid;
   border-radius: 50%;
   padding: 0.4rem;

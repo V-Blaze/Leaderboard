@@ -2,6 +2,9 @@
 
 - A JavaScript project for the Leaderboard list app
 
+# Live Demo
+- [Live Demo](https://rawcdn.githack.com/V-Blaze/Leaderboard/bf91d1cca19465bbcdd7f5e8aa068cc9a55097e5/dist/index.html)
+
 ## Built With
 
 - HTML
@@ -68,6 +71,7 @@ See the [open issues](#) for a full list of proposed features (and known issues)
 - GitHub: [@V-blaze](https://github.com/V-Blaze)
 - Twitter: [@blaze_valentine](https://twitter.com/blaze_valentine)
 - LinkedIn: [@valentine-blaze](https://www.linkedin.com/in/valentine-blaze/)
+
 
 ## 🤝 Contributing
 

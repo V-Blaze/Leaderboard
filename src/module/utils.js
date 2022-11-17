@@ -1,4 +1,5 @@
-import { showFeedBack } from "./feedback.js";
+import showFeedBack from './feedback.js';
+
 const scoreList = document.querySelector('.score-list');
 
 export const displayScores = ({ user, score }) => {
@@ -45,14 +46,13 @@ export const addNewScore = async (newScore) => {
     const data = await res.json();
 
     if (!res.ok) {
-      showFeedBack(data.message)
+      showFeedBack(data.message);
       return data;
     }
 
     getAllGameScores();
-    showFeedBack(data.result)
+    showFeedBack(data.result);
     return data;
-    
   } catch (error) {
     return error;
   }
