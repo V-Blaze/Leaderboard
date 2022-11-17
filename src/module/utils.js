@@ -4,7 +4,7 @@ const displayScores = ({ user, score }) => {
   const div = document.createElement('div');
   div.className = 'score-item';
   div.innerHTML = `
-    <span class="name">${user}</span>:<span class="score">${score}</span>
+  <i class="fa-solid fa-user-tie"></i><span class="name">${user}</span>:<span class="score">${score}</span>
     `;
 
   return div;

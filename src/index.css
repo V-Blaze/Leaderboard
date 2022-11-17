@@ -15,9 +15,9 @@
 }
 
 .score-section {
-  margin: 5% 5%;
+  margin: 5% 2%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   column-gap: 2.5rem;
 }
 
@@ -87,4 +87,12 @@ footer {
   padding: 2%;
   background-color: #ddd;
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .score-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
+  }
 }
