@@ -4,9 +4,23 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url('./assets/mainBg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  margin-bottom: 5%;
+}
+
+
 .main-section {
   background-color: #fff;
   margin: 5% 20%;
+  border-radius: 5px;
+  background: rgb(209,208,233);
+background: linear-gradient(90deg, rgba(209,208,233,1) 0%, rgba(189,189,236,1) 26%, rgba(200,200,254,1) 33%, rgba(159,159,236,1) 39%, rgba(167,237,251,1) 100%);
 }
 
 .title h1 {
@@ -19,6 +33,7 @@
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 2.5rem;
+
 }
 
 .recent-scores {
@@ -47,9 +62,23 @@
   background-color: #ddd;
 }
 
+.score-list div:nth-child(odd) {
+  color: #fff;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 39%, rgba(0,212,255,1) 100%);
+}
+
+.score-list i{
+  border: 1px solid;
+  border-radius: 50%;
+  padding: 0.4rem;
+}
+
 .score-item {
-  margin: 4% 0;
-  padding: 0 3%;
+  padding: 4% 3%;
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 1fr;
+  gap: 4rem;
 }
 
 .add-scores {
@@ -66,7 +95,9 @@
 .score-form input {
   margin: 5% 0;
   border: 1px solid #000;
-  border-radius: 2px;
+  border-radius: 5px;
+  height: 2.1rem;
+  padding-left: 1.1rem;
 }
 
 .form-btn {
@@ -79,14 +110,12 @@
 }
 
 footer {
-  position: absolute;
   bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2%;
   background-color: #ddd;
-  width: 100%;
 }
 
 @media (min-width: 768px) {
